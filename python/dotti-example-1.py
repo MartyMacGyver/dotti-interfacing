@@ -39,15 +39,9 @@ if __name__ == '__main__':
         px = random.randrange(64)
         newch.write(struct.pack('<BBBBBB', 0x07, 0x02, px+1, 0x00, 0x00, 0x00))
         time.sleep(0.1)
-    # while 1:
-    #     for px in range(64):
-    #         colR = random.randrange((px+1)*4)
-    #         colG = random.randrange((px+1)*4)
-    #         colB = random.randrange((px+1)*4)
-    #         newch.write(struct.pack('<BBBBBB', 0x07, 0x02, px+1, colR, colG, colB))
-    #         time.sleep(0.10)
-    # try:
-    # except BTLEException as e:
     conn.disconnect()
     exit()
+
+    # try:
+    # except BTLEException as e:
 
